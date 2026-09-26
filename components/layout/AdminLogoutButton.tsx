@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { apiUrl } from "@/lib/api";
 
 export default function AdminLogoutButton() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function AdminLogoutButton() {
     try {
       setLoading(true);
 
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api"}/auth/logout`, {
+      await fetch(apiUrl("/auth/logout"), {
         method: "POST",
         credentials: "include",
       });

@@ -7,6 +7,7 @@ import { buildWhatsAppMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { groupCartItems } from "@/lib/group-cart-items";
 import CartProductGroup from "@/components/products/CartProductGroup";
 import pageBackground from "@/img/3.jpg";
+import { apiUrl } from "@/lib/api";
 
 const phonePattern = /^[+()\d\s-]{7,30}$/;
 
@@ -47,7 +48,7 @@ export default function CartPage() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api"}/orders`, {
+      const response = await fetch(apiUrl("/orders"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
