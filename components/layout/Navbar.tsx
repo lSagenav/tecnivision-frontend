@@ -30,7 +30,7 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-7 md:flex">
           {links.map(([href, label]) =>
-            href === "/#contacto" ? (
+            href.startsWith("/#") ? (
               <a key={href} href={href} className="text-sm font-semibold text-white/85 transition hover:text-white">
                 {label}
               </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
         <nav className="border-t border-white/10 bg-slate-950/95 px-4 py-4 md:hidden">
           <div className="site-container grid gap-2">
             {links.map(([href, label]) =>
-              href === "/#contacto" ? (
+              href.startsWith("/#") ? (
                 <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-white/85 hover:bg-white/10">
                   {label}
                 </a>
