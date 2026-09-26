@@ -5,7 +5,7 @@ import contactCard from "@/img/card.png";
 export default function Footer() {
   return (
     <footer id="contacto" className="scroll-mt-24 border-t border-slate-800 bg-slate-950 text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-5 px-4 py-3 sm:px-6 md:grid-cols-[1fr_.65fr_.82fr]">
+      <div className="site-container grid items-center gap-5 py-3 md:grid-cols-[1fr_.65fr_.82fr]">
         <div>
           <div className="font-display text-xl font-extrabold">TecniVision</div>
           <p className="mt-1.5 max-w-sm text-sm leading-5 text-slate-300">Tecnologia, accesorios y soluciones de seguridad con atencion personalizada en Colombia.</p>

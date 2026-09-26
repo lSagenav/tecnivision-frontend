@@ -19,6 +19,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.site-container {
+  width: 92%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 2vw, 32px);
+}
+
+@media (max-width: 639px) {
+  .site-container {
+    width: 100%;
+    padding-inline: 16px;
+  }
+}
+
 .font-display { font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.035em; }
 .text-gradient {
   background: linear-gradient(135deg, var(--brand-cyan), var(--brand-blue) 55%, var(--brand-violet));

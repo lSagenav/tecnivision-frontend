@@ -35,10 +35,10 @@ export default async function CatalogPage({ searchParams }: PageProps) {
 
   return (
     <section
-      className="bg-slate-950 bg-cover bg-fixed bg-center px-4 py-14 sm:px-6"
+      className="bg-slate-950 bg-cover bg-fixed bg-center py-14"
       style={{ backgroundImage: `linear-gradient(rgba(2, 6, 23, .76), rgba(2, 6, 23, .82)), url(${pageBackground.src})` }}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="site-container">
       {agregado === "1" && <ProductStatusModal message="Producto agregado al carrito con éxito" returnHref={catalogUrl({ sede: activeBranch.slug, categoria, q: search })} confirmLabel="Seguir comprando" />}
       <div className="rounded-[2rem] border border-white/15 bg-white/10 px-6 py-10 text-white shadow-2xl shadow-black/20 backdrop-blur md:px-10">
         <p className="text-sm font-bold uppercase tracking-[.2em] text-white/75">Catálogo TecniVision</p>

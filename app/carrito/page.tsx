@@ -95,10 +95,10 @@ export default function CartPage() {
 
   return (
     <div
-      className="min-h-full bg-slate-950 bg-cover bg-fixed bg-center px-4 py-14 sm:px-6"
+      className="min-h-full bg-slate-950 bg-cover bg-fixed bg-center py-14"
       style={{ backgroundImage: `linear-gradient(rgba(2, 6, 23, .76), rgba(2, 6, 23, .84)), url(${pageBackground.src})` }}
     >
-    <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+    <div className="site-container grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
       <section>
         <h1 className="mb-6 text-3xl font-bold text-white">Carrito</h1>
 

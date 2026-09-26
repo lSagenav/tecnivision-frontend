@@ -23,7 +23,7 @@ export default function Navbar() {
       className="sticky top-0 z-50 border-b border-white/15 bg-slate-950/85 bg-cover bg-center text-white shadow-lg shadow-slate-950/20 backdrop-blur-xl"
       style={{ backgroundImage: `linear-gradient(rgba(2, 6, 23, .78), rgba(2, 6, 23, .78)), url(${pageBackground.src})` }}
     >
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="site-container flex h-18 items-center justify-between">
         <Link href="/" className="font-display text-xl font-extrabold tracking-tight text-gradient">
           TecniVision
         </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
       {open && (
         <nav className="border-t border-white/10 bg-slate-950/95 px-4 py-4 md:hidden">
-          <div className="mx-auto grid max-w-7xl gap-2">
+          <div className="site-container grid gap-2">
             {links.map(([href, label]) =>
               href === "/#contacto" ? (
                 <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-xl px-4 py-3 text-sm font-semibold text-white/85 hover:bg-white/10">

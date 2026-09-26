@@ -17,7 +17,7 @@ export default async function ProductPage({ params }: PageProps) {
   const branch = getBranchBySlug(product.branchSlug);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+    <div className="site-container py-12">
       <Link href={`/catalogo?sede=${product.branchSlug}`} className="text-sm font-bold text-blue-600">← Volver al catálogo</Link>
       <div className="mt-6 grid gap-10 lg:grid-cols-2">
         <div className="overflow-hidden rounded-[2rem] border border-white bg-gradient-to-br from-white to-blue-50 shadow-xl shadow-blue-100/60">

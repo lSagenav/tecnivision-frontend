@@ -45,7 +45,7 @@ export default async function HomePage() {
         />
         <div className="absolute inset-0 bg-slate-950/65" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/55 to-slate-950/20" />
-        <div className="relative mx-auto max-w-7xl px-4 pt-20 sm:px-6 md:pt-28">
+        <div className="site-container relative pt-20 md:pt-28">
           <div className="max-w-3xl">
             <span className="inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-bold backdrop-blur">Tecnología y seguridad en un solo lugar</span>
             <h1 className="font-display mt-6 text-5xl font-black leading-[.96] md:text-7xl">Tecnología que <span className="font-normal italic">conecta</span> contigo.</h1>
@@ -65,7 +65,7 @@ export default async function HomePage() {
       </section>
 
       {categories.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 pb-20 pt-0 sm:px-6">
+        <section className="site-container pb-20 pt-0">
           <p className="text-sm font-bold uppercase tracking-widest text-cyan-200">Explora</p>
           <h2 className="font-display mt-2 text-3xl font-black text-white md:text-4xl">Compra por categoría</h2>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -83,7 +83,7 @@ export default async function HomePage() {
       )}
 
       {featured.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+        <section className="site-container pb-20">
           <p className="text-sm font-bold uppercase tracking-widest text-cyan-200">Selección especial</p>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-display mt-2 text-3xl font-black text-white md:text-4xl">Productos destacados</h2>
@@ -95,7 +95,8 @@ export default async function HomePage() {
         </section>
       )}
 
-      <section id="sedes" className="mx-auto max-w-7xl scroll-mt-24 px-4 pb-12 sm:px-6">
+      <section id="sedes" className="scroll-mt-24 pb-12">
+        <div className="site-container">
         <div className="overflow-hidden rounded-[2rem] surface-hero p-8 text-white md:p-14">
           <h2 className="font-display text-3xl font-black md:text-5xl">Elige tu sede</h2>
           <p className="mt-3 max-w-2xl text-white/80">Cada sede maneja su catálogo y atención independiente.</p>
@@ -119,6 +120,7 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>
     </div>
