@@ -29,3 +29,16 @@ body {
 .surface-hero { background: linear-gradient(135deg, #3e92ff 0%, #4868ef 48%, #9b5ce8 100%); }
 .card-elevated { box-shadow: 0 14px 40px -20px rgba(50, 67, 130, .35); transition: transform .25s ease, box-shadow .25s ease; }
 .card-elevated:hover { transform: translateY(-5px); box-shadow: 0 25px 55px -25px rgba(91, 65, 181, .48); }
+
+.navigation-loading-indicator {
+  animation: navigation-loading-appear 180ms ease 120ms both;
+}
+
+@keyframes navigation-loading-appear {
+  from { opacity: 0; }
+  to { opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-loading-indicator { animation: none; opacity: 0.75; }
+}
