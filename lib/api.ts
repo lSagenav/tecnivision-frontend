@@ -1,0 +1,3 @@
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
+export async function apiFetch<T>(path:string, init?:RequestInit):Promise<T>{const r=await fetch(`${API_URL}${path}`,{...init,cache:init?.cache??"no-store"});if(!r.ok){let m=`Error API (${r.status})`;try{const d=await r.json();m=d.error||m;}catch{}throw new Error(m);}return r.json();}
+export async function browserApi<T>(path:string,init?:RequestInit):Promise<T>{const r=await fetch(`${API_URL}${path}`,{...init,credentials:"include"});if(!r.ok){let m=`Error API (${r.status})`;try{const d=await r.json();m=d.error||m;}catch{}throw new Error(m);}return r.json();}

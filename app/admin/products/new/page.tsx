@@ -1,0 +1,1 @@
+import AdminGuard from "@/components/admin/AdminGuard";import ProductForm from "@/components/admin/ProductForm";export default function Page(){return <AdminGuard><section className="min-h-screen bg-slate-100 px-4 py-10"><h1 className="mx-auto mb-6 max-w-3xl text-3xl font-black">Agregar producto</h1><ProductForm/></section></AdminGuard>}

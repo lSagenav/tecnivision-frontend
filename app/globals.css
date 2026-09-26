@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #3977ff;
+  --brand-violet: #8a5cff;
+  --brand-cyan: #6bd7ef;
+  --ink: #172036;
+  --background: #f7f9fd;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #ede9ff 0, transparent 32%), linear-gradient(180deg, #fbfcff, var(--background));
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display { font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.035em; }
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-cyan), var(--brand-blue) 55%, var(--brand-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.surface-hero { background: linear-gradient(135deg, #3e92ff 0%, #4868ef 48%, #9b5ce8 100%); }
+.card-elevated { box-shadow: 0 14px 40px -20px rgba(50, 67, 130, .35); transition: transform .25s ease, box-shadow .25s ease; }
+.card-elevated:hover { transform: translateY(-5px); box-shadow: 0 25px 55px -25px rgba(91, 65, 181, .48); }
