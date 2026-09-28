@@ -5,6 +5,7 @@ import { Menu, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
 import { useCartStore } from "@/store/cart-store";
 import pageBackground from "@/img/3.jpg";
+import AdminSessionMenu from "./AdminSessionMenu";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -43,6 +44,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <AdminSessionMenu />
           <Link href="/carrito" className="relative inline-flex h-10 items-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-slate-950 hover:bg-white/90">
             <ShoppingBag className="h-4 w-4" />
             <span className="hidden sm:inline">Carrito</span>
